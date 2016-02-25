@@ -1,13 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="HomeScreen">
-  <grid id="27dc6" row-count="1" column-count="1" layout-manager="GridLayoutManager">
-    <margin top="0" left="0" bottom="0" right="0"/>
+  <grid id="27dc6" binding="MainFrame" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="10" left="10" bottom="10" right="10"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
-      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+      <xy x="20" y="20" width="1000" height="800"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-11922292"/>
+      <foreground color="-1"/>
+      <minimumSize width="1000" height="800"/>
+      <opaque value="true"/>
+    </properties>
     <border type="none"/>
-    <children/>
+    <children>
+      <component id="70c0f" class="javax.swing.JButton" binding="createAKeyButton" default-binding="true">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="25"/>
+            <preferred-size width="-1" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-9823334"/>
+          <borderPainted value="false"/>
+          <contentAreaFilled value="true"/>
+          <defaultCapable value="true"/>
+          <focusPainted value="true"/>
+          <font swing-font="Button.font"/>
+          <foreground color="-1"/>
+          <text value="Create A Key"/>
+        </properties>
+      </component>
+      <component id="49697" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="600" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <font name="Segoe UI Light" size="36"/>
+          <foreground color="-1"/>
+          <text value="NT Cryptography Tool"/>
+        </properties>
+      </component>
+      <grid id="bc2f" binding="EncDecButtonContainer" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="5" left="0" bottom="5" right="0"/>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <minimum-size width="-1" height="300"/>
+          </grid>
+        </constraints>
+        <properties>
+          <opaque value="false"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="c198b" class="javax.swing.JButton" binding="encryptButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-9823334"/>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="true"/>
+              <focusable value="false"/>
+              <font name="Segoe UI Light" size="20" style="1"/>
+              <foreground color="-1"/>
+              <text value="Encrypt"/>
+            </properties>
+          </component>
+          <component id="9718" class="javax.swing.JButton" binding="decryptButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-9823334"/>
+              <borderPainted value="false"/>
+              <font name="Segoe UI Light" size="20" style="1"/>
+              <foreground color="-1"/>
+              <text value="Decrypt"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
   </grid>
 </form>
