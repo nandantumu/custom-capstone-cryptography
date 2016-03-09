@@ -6,23 +6,33 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class MainApp extends Application {
+
+    private Stage mainStage;
+    private FXMLLoader loader;
 
     public static void main(String[] args) throws Exception {
         launch(args);
     }
 
     public void start(Stage stage) throws Exception {
-
+        mainStage = stage;
 
         String fxmlFile = "/fxml/HomeScreen.fxml";
-        FXMLLoader loader = new FXMLLoader();
+        loader = new FXMLLoader();
         Parent rootNode = (Parent) loader.load(getClass().getResourceAsStream("/fxml/HomeScreen.fxml"));
 
         Scene scene = new Scene(rootNode, 600, 400);
-
-        stage.setTitle("Hello JavaFX and Maven");
+        stage.setTitle("Encryption Tool");
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void changeView(String scene) throws IOException{
+        Parent rootNode = (Parent) loader.load(getClass().getResourceAsStream("/fxml/"+scene));
+        Scene scene1 = new Scene(rootNode);
+        mainStage.setScene(scene1);
     }
 }

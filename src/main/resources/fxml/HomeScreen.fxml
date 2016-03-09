@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="HomeScreenRootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" scaleShape="false" style="-fx-background-color: #4a148c;" stylesheets="@../styles/uiSkin.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nt.cryptotool.HelloController">
+<BorderPane fx:id="HomeScreenRootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" scaleShape="false" style="-fx-background-color: #4a148c;" stylesheets="@styles/uiSkin.css" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nt.cryptotool.HomeScreenController">
    <top>
       <Label text="NT Encryption Tool" textFill="WHITE" BorderPane.alignment="TOP_LEFT">
          <BorderPane.margin>
@@ -18,7 +18,7 @@
       </Label>
    </top>
    <bottom>
-      <Button fx:id="KeyGenButton" mnemonicParsing="false" prefWidth="580.0" styleClass="mainButton" stylesheets="@../styles/uiSkin.css" text="Generate a Key" textFill="WHITE" BorderPane.alignment="CENTER">
+      <Button fx:id="KeyGenButton" mnemonicParsing="false" prefWidth="580.0" styleClass="lowerBarButton" stylesheets="@../styles/uiSkin.css" text="Generate a Key" textFill="WHITE" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets bottom="5.0" />
          </BorderPane.margin>
@@ -38,7 +38,7 @@
       </Button>
    </left>
    <right>
-      <Button fx:id="DecryptButton" alignment="CENTER" mnemonicParsing="false" prefHeight="275.0" prefWidth="285.0" style="-fx-background-color: rgba(0,0,0,0); -fx-background-radius: 0; -fx-border-color: white;" styleClass="mainButton" stylesheets="@../styles/uiSkin.css" text="Decrypt" textFill="WHITE" BorderPane.alignment="CENTER">
+      <Button fx:id="DecryptButton" alignment="CENTER" mnemonicParsing="false" prefHeight="275.0" prefWidth="285.0" styleClass="mainButton" stylesheets="@../styles/uiSkin.css" text="Decrypt" textFill="WHITE" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets right="10.0" />
          </BorderPane.margin>

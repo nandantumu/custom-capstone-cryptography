@@ -3,3 +3,18 @@
     -fx-background-radius: 0;
     -fx-border-color: white;
 }
+.mainButton:hover {
+    -fx-border-width: 3;
+}
+
+.lowerBarButton{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-radius: 0;
+    -fx-border-color: white;
+}
+.lowerBarButton:hover{
+    -fx-border-width: 2;
+}
+.background{
+    -fx-background-color:  #4a148c;
+}
