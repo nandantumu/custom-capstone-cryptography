@@ -6,14 +6,14 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="HomeScreenRootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" scaleShape="false" style="-fx-background-color: #4a148c;" stylesheets="@styles/uiSkin.css" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nt.cryptotool.HomeScreenController">
+<BorderPane fx:id="HomeScreenRootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" scaleShape="false" style="-fx-background-color: #4a148c;" stylesheets="@styles/uiSkin.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nt.cryptotool.HomeScreenController">
    <top>
       <Label text="NT Encryption Tool" textFill="WHITE" BorderPane.alignment="TOP_LEFT">
          <BorderPane.margin>
             <Insets left="5.0" top="5.0" />
          </BorderPane.margin>
          <font>
-            <Font name="HelveticaNeueLTPro-LtCn" size="48.0" />
+            <Font name="Helvetica Neue Light" size="48.0" />
          </font>
       </Label>
    </top>
@@ -33,7 +33,7 @@
             <Insets left="10.0" />
          </BorderPane.margin>
          <font>
-            <Font name="HelveticaNeueLTPro-Lt" size="24.0" />
+            <Font size="24.0" />
          </font>
       </Button>
    </left>
