@@ -4,9 +4,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
 import sun.applet.Main;
 
-public class HomeScreenController
+public class HomeScreenController extends BorderPane
 {
 
 
@@ -17,6 +18,10 @@ public class HomeScreenController
 
     HomeScreenController(MainApp main){
         this.main = main;
+    }
+
+    HomeScreenController(){
+
     }
 
     public void onClickEncryptButton(){

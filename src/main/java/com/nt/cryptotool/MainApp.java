@@ -4,9 +4,11 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.io.InputStream;
 
 public class MainApp extends Application {
 
@@ -18,12 +20,13 @@ public class MainApp extends Application {
     }
 
     public void start(Stage stage) throws Exception {
+
         mainStage = stage;
-
-        String fxmlFile = "/fxml/HomeScreen.fxml";
+        //HomeScreenController homeScreenController = new HomeScreenController(this);
+        String fxmlFile = "fxml/HomeScreen.fxml";
         loader = new FXMLLoader();
-        Parent rootNode = (Parent) loader.load(getClass().getResourceAsStream("/fxml/HomeScreen.fxml"));
-
+        loader.getController();
+        BorderPane rootNode = (BorderPane) loader.load(loader.getClassLoader().getResource("fxml/HomeScreen.fxml"));
         Scene scene = new Scene(rootNode, 600, 400);
         stage.setTitle("Encryption Tool");
         stage.setScene(scene);
