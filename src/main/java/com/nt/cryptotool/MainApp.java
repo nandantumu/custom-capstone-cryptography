@@ -30,6 +30,7 @@ public class MainApp extends Application {
         Scene scene = new Scene(rootNode, 600, 400);
         stage.setTitle("Encryption Tool");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 
