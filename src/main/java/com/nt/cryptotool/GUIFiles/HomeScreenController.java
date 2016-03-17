@@ -1,11 +1,9 @@
-package com.nt.cryptotool;
+package com.nt.cryptotool.GUIFiles;
 
+import com.nt.cryptotool.MainApp;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
-import sun.applet.Main;
 
 public class HomeScreenController extends BorderPane
 {
