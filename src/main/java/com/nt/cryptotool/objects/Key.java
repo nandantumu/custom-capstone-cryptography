@@ -1,10 +1,13 @@
 package com.nt.cryptotool.objects;
 
+import com.nt.cryptotool.utils.Converter;
+import sun.jvm.hotspot.debugger.win32.coff.COFFLineNumber;
+
 import java.io.File;
 import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.BitSet;
-import java.util.Random;
+import java.security.SecureRandom;
 
 /**
  * Created by Nandan on 3/11/2016.
@@ -17,6 +20,11 @@ import java.util.Random;
  */
 public class Key implements Serializable{
 
+    private BitSet firstWhite;
+    private BitSet lastWhite;
+    private BitSet sBox;
+    private BitSet keySecurity;
+    private SecureRandom sRandom;
 
     /**
      * Constructor method for a pre-existing key.
@@ -33,7 +41,15 @@ public class Key implements Serializable{
      * @param password the password that the file will be saved with.
      */
     public Key(String password){
-
+        firstWhite = new BitSet(256);
+        lastWhite = new BitSet(256);
+        sBox = new BitSet(64);
+        sRandom = new SecureRandom();
+        sRandom.generateSeed(512);
+        byte[] encryptionXor = new byte[72];
+        sRandom.nextBytes(encryptionXor);
+        Converter c = new Converter();
+        keySecurity = c.byteToBits(encryptionXor);
     }
 
     public BitSet getFirstWhiteningKey(){
