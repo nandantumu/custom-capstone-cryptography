@@ -3,18 +3,15 @@ package com.nt.cryptotool.utils;
 /**
  * Created by Nandan on 3/7/2016.
  */
-public class FileSaver {
+public class FileOperations {
 
     private String fileName,fileType,OwnerID;
 
-    FileSaver(String fileName, String fileType, String ownerID){
-
+    public FileOperations(){
+        //Empty constructor
     }
 
-    FileSaver(String fileName, String fileType){
-
-    }
-
+    @Deprecated
     private boolean doesOwnerIDExist(){
         if(OwnerID!=null)return true;
         else return false;
