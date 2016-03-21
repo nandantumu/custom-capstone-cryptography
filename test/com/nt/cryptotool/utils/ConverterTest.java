@@ -1,4 +1,6 @@
-package com.nt.cryptotool.utils;
+package test.com.nt.cryptotool.utils;
+
+import com.nt.cryptotool.utils.Converter;
 
 import java.util.BitSet;
 
