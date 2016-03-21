@@ -1,7 +1,7 @@
 package com.nt.cryptotool.objects;
 
+import com.nt.cryptotool.MainApp;
 import com.nt.cryptotool.utils.Converter;
-import sun.jvm.hotspot.debugger.win32.coff.COFFLineNumber;
 
 import java.io.File;
 import java.io.Serializable;
@@ -25,6 +25,7 @@ public class Key implements Serializable{
     private BitSet sBox;
     private BitSet keySecurity;
     private SecureRandom sRandom;
+    private Converter converter = new Converter();
 
     /**
      * Constructor method for a pre-existing key.
@@ -44,12 +45,15 @@ public class Key implements Serializable{
         firstWhite = new BitSet(256);
         lastWhite = new BitSet(256);
         sBox = new BitSet(64);
+        keySecurity = new BitSet();
         sRandom = new SecureRandom();
-        sRandom.generateSeed(512);
-        byte[] encryptionXor = new byte[72];
-        sRandom.nextBytes(encryptionXor);
-        Converter c = new Converter();
-        keySecurity = c.byteToBits(encryptionXor);
+        //Generate XOR Key
+        sRandom.setSeed(converter.stringToBigInt(password).longValue());
+        keySecurity = converter.bitsFromRandom(sRandom,576);
+        //Reset SecureRandom
+        sRandom.setSeed(sRandom.generateSeed(512));
+
+        //Generate firstWhite
     }
 
     public BitSet getFirstWhiteningKey(){
