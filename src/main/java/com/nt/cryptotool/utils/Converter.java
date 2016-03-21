@@ -33,8 +33,10 @@ public class Converter {
      * @param bytearray Byte[] to be converted
      * @return BitSet based on Byte[]
      */
+
     public BitSet byteToBits(byte[] bytearray){
         BitSet returnValue;
+        //noinspection Since15
         returnValue = BitSet.valueOf(bytearray);
         return returnValue;
     }
