@@ -1,6 +1,7 @@
 package com.nt.cryptotool.utils;
 
 import java.math.BigInteger;
+import java.nio.ByteBuffer;
 import java.security.SecureRandom;
 import java.util.BitSet;
 
@@ -35,10 +36,22 @@ public class Converter {
      */
 
     public BitSet byteToBits(byte[] bytearray){
-        BitSet returnValue;
-        //noinspection Since15
-        returnValue = BitSet.valueOf(bytearray);
+        BitSet returnValue = new BitSet((bytearray.length*8));
+        ByteBuffer  byteBuffer = ByteBuffer.wrap(bytearray);
+        //System.out.println(byteBuffer.asIntBuffer().get(1));
+        //Hexadecimal values used are Big-Endian, because Java is Big-Endian
+        for (int i = 0; i < bytearray.length; i++) {
+            byte thebyte = byteBuffer.get(i);
+            for (int j = 0; j <8 ; j++) {
+                returnValue.set(i*8+j,isBitSet(thebyte,j));
+            }
+        }
         return returnValue;
+    }
+
+    private static Boolean isBitSet(byte b, int bit)
+    {
+        return (b & (1 << bit)) != 0;
     }
 
     /**
