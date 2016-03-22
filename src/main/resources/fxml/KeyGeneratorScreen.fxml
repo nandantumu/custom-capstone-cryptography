@@ -11,10 +11,10 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@../styles/uiSkin.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
    <bottom>
-      <Button mnemonicParsing="false" styleClass="lowerBarButton" stylesheets="@../styles/uiSkin.css" text="Encrypt" textFill="WHITE" BorderPane.alignment="CENTER" />
+      <Button mnemonicParsing="false" styleClass="lowerBarButton" stylesheets="@../styles/uiSkin.css" text="Decrypt" textFill="WHITE" BorderPane.alignment="CENTER" />
    </bottom>
    <top>
-      <Label text="Encrypt" textFill="WHITE" BorderPane.alignment="TOP_LEFT">
+      <Label text="Key Generator" textFill="WHITE" BorderPane.alignment="TOP_LEFT">
          <font>
             <Font name="Helvetica Neue Light" size="36.0" />
          </font>
@@ -28,25 +28,17 @@
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label text="Select Keyfile" textFill="WHITE">
+                  <Label text="Select Target Directory" textFill="WHITE">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
                      <padding>
                         <Insets right="5.0" />
-                     </padding></Label>
-                  <Button mnemonicParsing="false" styleClass="mainButton" text="Button" textFill="WHITE" />
-               </children>
-            </HBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <Label text="Select Target File" textFill="WHITE">
-                     <padding>
-                        <Insets right="5.0" />
                      </padding>
                   </Label>
-                  <Button mnemonicParsing="false" styleClass="mainButton" text="Button" textFill="WHITE" />
-               </children></HBox>
+                  <Button mnemonicParsing="false" styleClass="mainButton" text="Click to Select" textFill="WHITE" />
+               </children>
+            </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
                   <Label text="Enter Key Password" textFill="WHITE">
@@ -54,8 +46,20 @@
                         <Insets right="5.0" />
                      </padding>
                   </Label>
-                  <TextField promptText="Enter your password " styleClass="textBoxes" />
+                  <TextField promptText="Enter your password." styleClass="textBoxes" />
                </children></HBox>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Your Keyfile will be saved as Keyfile.secure" textFill="WHITE">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
          </children>
       </VBox>
    </center>

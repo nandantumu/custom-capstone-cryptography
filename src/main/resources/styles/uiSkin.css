@@ -15,6 +15,13 @@
 .lowerBarButton:hover{
     -fx-border-width: 2;
 }
+
 .background{
     -fx-background-color:  #4a148c;
+}
+
+.textBoxes {
+    -fx-background-color: rgba(255,255,255,50);
+    -fx-background-radius: 0;
+    -fx-border-color: white;
 }
