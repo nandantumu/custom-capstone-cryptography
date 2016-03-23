@@ -1,5 +1,6 @@
 package com.nt.cryptotool;
 
+import com.nt.cryptotool.GUIFiles.HomeScreenController;
 import com.nt.cryptotool.utils.Converter;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -26,7 +27,6 @@ public class MainApp extends Application {
         //HomeScreenController homeScreenController = new HomeScreenController(this);
         String fxmlFile = "fxml/HomeScreen.fxml";
         loader = new FXMLLoader();
-        loader.getController();
         BorderPane rootNode = (BorderPane) loader.load(loader.getClassLoader().getResource("fxml/HomeScreen.fxml"));
         Scene scene = new Scene(rootNode, 600, 400);
         stage.setTitle("Encryption Tool");
