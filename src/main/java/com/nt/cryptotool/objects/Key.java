@@ -52,26 +52,39 @@ public class Key implements Serializable{
         keySecurity = converter.bitsFromRandom(sRandom,576);
         //Reset SecureRandom
         sRandom.setSeed(sRandom.generateSeed(512));
-
         //Generate firstWhite
+        firstWhite = converter.bitsFromRandom(sRandom,256);
+        //Generate lastWhite
+        lastWhite = converter.bitsFromRandom(sRandom,256);
+        //Generate SBox
+        sBox = converter.bitsFromRandom(sRandom,64);
     }
 
     public BitSet getFirstWhiteningKey(){
-        BitSet firstWhiteningKey = new BitSet(256);
-        //TODO get actual whitening keys from file
-        return firstWhiteningKey;
+        return firstWhite;
     }
 
     public BitSet getLastWhiteningKey(){
-        BitSet lastWhiteningKey = new BitSet(256);
-        //TODO get actual whitening keys from file
-        return lastWhiteningKey;
+        return lastWhite;
     }
 
     public BitSet getSBoxKeys(){
-        BitSet sboxKeys = new BitSet(64);
-        //TODO get sbox keys from actual files
-        return sboxKeys;
+        return sBox;
+    }
+
+    public BitSet getBitsToSave(){
+        BitSet finalBits = new BitSet(576);
+        for (int i = 0; i < 64; i++) {
+            finalBits.set(i,sBox.get(i));
+        }
+        for (int i = 0; i <256 ; i++) {
+            finalBits.set(64+i,firstWhite.get(i));
+        }
+        for (int i = 0; i <256 ; i++) {
+            finalBits.set(320+i,lastWhite.get(i));
+        }
+        finalBits.xor(keySecurity);
+        return finalBits;
     }
 
     @Override

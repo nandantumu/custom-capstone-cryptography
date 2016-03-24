@@ -16,12 +16,12 @@ public class KeyGenerator {
         this.password = password;
     }
 
-    public Key generateKey() throws PasswordNotFoundException{
-        if(password==null){
+    public void generateKey() throws PasswordNotFoundException{
+        /*if(password==null){
             throw new PasswordNotFoundException("No Password Found");
-        }
+        }*/
         Key theKey = new Key(password);
-        return  theKey;
+
 
     }
 
