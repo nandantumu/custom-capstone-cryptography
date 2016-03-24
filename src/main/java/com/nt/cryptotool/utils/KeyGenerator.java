@@ -2,27 +2,23 @@ package com.nt.cryptotool.utils;
 
 import com.nt.cryptotool.errors.PasswordNotFoundException;
 import com.nt.cryptotool.objects.Key;
+import org.apache.commons.io.FileUtils;
 
+import java.io.File;
+import java.io.IOException;
 import java.math.BigInteger;
 
 /**
  * Created by Nandan on 3/11/2016.
  */
 public class KeyGenerator {
-    private String password;
-    private BigInteger randomkey;
-
-    public KeyGenerator(String password){
-        this.password = password;
-    }
-
-    public void generateKey() throws PasswordNotFoundException{
-        /*if(password==null){
-            throw new PasswordNotFoundException("No Password Found");
-        }*/
+    public void generateKey(File userChosenDirectory, String password) throws PasswordNotFoundException{
         Key theKey = new Key(password);
-
-
+        try {
+            FileUtils.writeByteArrayToFile(new File(userChosenDirectory.getAbsolutePath().concat("Keyfile.secure")),theKey.getBitsToSave().toByteArray());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
