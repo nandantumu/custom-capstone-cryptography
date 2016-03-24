@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@../styles/uiSkin.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@../styles/uiSkin.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nt.cryptotool.GUIFiles.KeyGeneratorController">
    <bottom>
       <Button fx:id="GenerateKeyButton" mnemonicParsing="false" styleClass="lowerBarButton" stylesheets="@../styles/uiSkin.css" text="Generate Key" textFill="WHITE" BorderPane.alignment="CENTER" />
    </bottom>
@@ -50,7 +50,7 @@
                </children></HBox>
             <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label text="Your Keyfile will be saved as Keyfile.secure" textFill="WHITE">
+                  <Label fx:id="BottomMessage" text="Your Keyfile will be saved as Keyfile.secure" textFill="WHITE">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>

@@ -75,6 +75,16 @@ public class HomeScreenController {
             @Override
             public void handle(ActionEvent event) {
                 System.out.println("KeyGenButton click handled");
+                System.out.println("DecryptButton click handled");
+                Stage theMainStage = (Stage)HomeScreenRootPane.getScene().getWindow();
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/KeyGeneratorScreen.fxml"));
+                try {
+                    Parent root = (Parent) fxmlLoader.load(fxmlLoader.getClassLoader().getResource("fxml/KeyGeneratorScreen.fxml"));
+                    theMainStage.setScene(new Scene(root,600,400));
+                    theMainStage.show();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         });
     }
