@@ -48,7 +48,7 @@ public class Key implements Serializable{
         keySecurity = new BitSet();
         sRandom = new SecureRandom();
         //Generate XOR Key
-        sRandom.setSeed(converter.stringToBigInt(password).longValue());
+        sRandom.setSeed(password.getBytes());
         keySecurity = converter.bitsFromRandom(sRandom,576);
         //Reset SecureRandom
         sRandom.setSeed(sRandom.generateSeed(512));

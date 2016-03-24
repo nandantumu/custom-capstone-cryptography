@@ -55,10 +55,11 @@ public class Converter {
     }
 
     /**
-     * Turns input string into a BigInteger.
+     * Turns input string into a BigInteger. Unused, probably doesn't work
      * @param input String to be converted
      * @return BigInteger output
      */
+    @Deprecated
     public BigInteger stringToBigInt(String input){
         BigInteger output = new BigInteger(input,2);
         return output;

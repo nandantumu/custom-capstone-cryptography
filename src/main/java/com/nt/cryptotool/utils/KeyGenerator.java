@@ -15,7 +15,8 @@ public class KeyGenerator {
     public void generateKey(File userChosenDirectory, String password) throws PasswordNotFoundException{
         Key theKey = new Key(password);
         try {
-            FileUtils.writeByteArrayToFile(new File(userChosenDirectory.getAbsolutePath().concat("Keyfile.secure")),theKey.getBitsToSave().toByteArray());
+            System.out.println(userChosenDirectory.getPath());
+            FileUtils.writeByteArrayToFile(new File(userChosenDirectory.getPath().concat("/Keyfile.secure")),theKey.getBitsToSave().toByteArray());
         } catch (IOException e) {
             e.printStackTrace();
         }

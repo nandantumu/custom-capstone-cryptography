@@ -10,6 +10,8 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.nt.cryptotool.errors.PasswordNotFoundException;
+import com.nt.cryptotool.utils.KeyGenerator;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -24,6 +26,7 @@ import javafx.stage.FileChooser;
 public class KeyGeneratorController {
 
     private File theChosenFile;
+    private String password;
 
     @FXML // ResourceBundle that was given to the FXMLLoader
     private ResourceBundle resources;
@@ -84,6 +87,23 @@ public class KeyGeneratorController {
                 else{
                     BottomMessage.setText("Your Keyfile will be saved as Keyfile.secure");
                     BottomMessage.setTextFill(Color.WHITE);
+                }
+            }
+        });
+
+        GenerateKeyButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                password = PasswordField.getText().trim();
+                KeyGenerator keyGenerator = new KeyGenerator();
+                try {
+                    keyGenerator.generateKey(theChosenFile,password);
+                    BottomMessage.setText("Your Keyfile will be saved as Keyfile.secure");
+                    BottomMessage.setTextFill(Color.WHITE);
+                } catch (PasswordNotFoundException e) {
+                    e.printStackTrace();
+                    BottomMessage.setText("No Password Found");
+                    BottomMessage.setTextFill(Color.RED);
                 }
             }
         });
