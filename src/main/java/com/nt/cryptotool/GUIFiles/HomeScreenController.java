@@ -49,10 +49,16 @@ public class HomeScreenController {
             @Override
             public void handle(ActionEvent event) {
                 System.out.println("EncryptButton click handled");
-                FileChooser fileChooser = new FileChooser();
-                fileChooser.setTitle("Get file");
-                File theSelectedFile = fileChooser.showOpenDialog(HomeScreenRootPane.getScene().getWindow());
-                System.out.println(theSelectedFile.getAbsoluteFile());
+                System.out.println("DecryptButton click handled");
+                Stage theMainStage = (Stage)HomeScreenRootPane.getScene().getWindow();
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/EncryptScreen.fxml"));
+                try {
+                    Parent root = (Parent) fxmlLoader.load(fxmlLoader.getClassLoader().getResource("fxml/EncryptScreen.fxml"));
+                    theMainStage.setScene(new Scene(root,600,400));
+                    theMainStage.show();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         });
         DecryptButton.setOnAction(new EventHandler<ActionEvent>() {
