@@ -1,6 +1,6 @@
 package com.nt.cryptotool.utils;
 
-/**
+/**This class is designed to format and export encrypted files, so that their names and extensions can be restored.
  * Created by Nandan on 3/7/2016.
  */
 public class FileOperations {
