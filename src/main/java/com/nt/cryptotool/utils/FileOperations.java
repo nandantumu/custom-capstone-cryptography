@@ -17,15 +17,14 @@ public class FileOperations {
         else return false;
     }
 
+    /**
+     * This method generates headers for the file to be generated from an encryption.
+     * <b>File headers are unimplemented in Version 1.0</b>
+     * @return String to be prepended to the file that results from the program
+     */
     public String generateHeaders(){
         String headerString = "";
-        headerString.concat(fileName+"//"+fileType+"//");
-        if(doesOwnerIDExist()){
-            headerString.concat(OwnerID);
-        }
-        else{
-            headerString.concat("NO OWN");
-        }
+        headerString.concat(fileName+"//"+fileType);
         headerString.concat("||");
         return headerString;
     }
