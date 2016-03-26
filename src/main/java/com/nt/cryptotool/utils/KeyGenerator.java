@@ -6,9 +6,9 @@ import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
-import java.math.BigInteger;
 
 /**
+ * This class wraps a single method, which is generates and saves a new key.
  * Created by Nandan on 3/11/2016.
  */
 public class KeyGenerator {

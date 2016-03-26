@@ -2,13 +2,15 @@ package com.nt.cryptotool.objects;
 
 import com.nt.cryptotool.MainApp;
 import com.nt.cryptotool.utils.Converter;
+import org.apache.commons.io.FileUtils;
+
 
 import java.io.File;
+import java.io.IOException;
 import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.BitSet;
 import java.security.SecureRandom;
-
 /**
  * Created by Nandan on 3/11/2016.
  * @author Nandan
@@ -35,6 +37,23 @@ public class Key implements Serializable{
      */
     public Key(File keyFile,String password){
         //TODO Input the keyfile, and convert it to a key object.
+        try {
+            //Get complete keyfile
+            byte[] allBytes = FileUtils.readFileToByteArray(keyFile);
+            BitSet allBits = converter.byteToBits(allBytes);
+            //Get the encryptionXor based on provided password.
+            //The fact that an incorrect password will not throw errors is a security feature.
+            sRandom.setSeed(password.getBytes());
+            keySecurity = converter.bitsFromRandom(sRandom,576);
+            //apply XOR to all bits
+            allBits.xor(keySecurity);
+            //Retrieve key portions
+            sBox = allBits.get(0,63);
+            firstWhite = allBits.get(64,319);
+            lastWhite = allBits.get(320,576);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -72,6 +91,10 @@ public class Key implements Serializable{
         return sBox;
     }
 
+    /**
+     * Saves all bits in the following order, S-Box, First Whitening Key, Last Whitening Key
+     * @return BitSet of encrypted key
+     */
     public BitSet getBitsToSave(){
         BitSet finalBits = new BitSet(576);
         for (int i = 0; i < 64; i++) {
