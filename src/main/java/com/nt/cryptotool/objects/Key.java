@@ -36,7 +36,6 @@ public class Key implements Serializable{
      * @see Key
      */
     public Key(File keyFile,String password){
-        //TODO Input the keyfile, and convert it to a key object.
         try {
             //Get complete keyfile
             byte[] allBytes = FileUtils.readFileToByteArray(keyFile);
