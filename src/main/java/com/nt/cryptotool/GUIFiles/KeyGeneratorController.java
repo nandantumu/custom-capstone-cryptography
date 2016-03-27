@@ -10,7 +10,7 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.nt.cryptotool.errors.PasswordNotFoundException;
+import com.nt.cryptotool.miscobjects.PasswordNotFoundException;
 import com.nt.cryptotool.utils.KeyGenerator;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -21,7 +21,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.stage.DirectoryChooser;
-import javafx.stage.FileChooser;
 
 public class KeyGeneratorController {
 
