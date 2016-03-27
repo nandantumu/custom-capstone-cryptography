@@ -1,4 +1,4 @@
-package com.nt.cryptotool.errors;
+package com.nt.cryptotool.miscobjects;
 
 /**
  * Created by Nandan on 3/11/2016.
