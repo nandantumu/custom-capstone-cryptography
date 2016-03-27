@@ -10,7 +10,7 @@ import com.nt.cryptotool.utils.PBox;
 public class Encrypter {
     private TargetFile targetFile;
     private Key key;
-    private PBox;
+    private PBox pBox;
 
     /**
      * Constructor method to generate new Encrypter object.
