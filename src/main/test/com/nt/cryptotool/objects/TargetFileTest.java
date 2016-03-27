@@ -1,5 +1,6 @@
 package test.com.nt.cryptotool.objects;
 
+import com.nt.cryptotool.miscobjects.Task;
 import com.nt.cryptotool.objects.TargetFile;
 import com.nt.cryptotool.utils.Converter;
 import org.junit.After;
@@ -7,8 +8,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.BitSet;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by Nandan on 3/21/2016.
@@ -20,7 +19,7 @@ public class TargetFileTest {
 
     @Before
     public void setUp() throws Exception {
-        targetFile = new TargetFile("C://Users/Nandan/Documents/MuseLog.txt");
+        targetFile = new TargetFile("C://Users/Nandan/Documents/MuseLog.txt", Task.Encrypt);
         converter = new Converter();
     }
 
@@ -42,7 +41,7 @@ public class TargetFileTest {
 
     @Test
     public void testGetContents() throws Exception {
-        byte[] answer = targetFile.getContents();
+        byte[] answer = targetFile.getBytesContents();
         BitSet answerSet = (converter.byteToBits(answer));
         System.out.println("Length of byte array: "+answer.length);
         System.out.println("Final byte val: "+answer[answer.length-1]);

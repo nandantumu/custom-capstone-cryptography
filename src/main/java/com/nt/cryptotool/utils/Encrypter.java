@@ -4,13 +4,16 @@ import com.nt.cryptotool.objects.Key;
 import com.nt.cryptotool.objects.TargetFile;
 import com.nt.cryptotool.utils.PBox;
 
+import java.io.IOException;
+import java.util.BitSet;
+import java.util.List;
+
 /**This class manages the Encryption process.
  * Created by Nandan on 3/26/2016.
  */
 public class Encrypter {
     private TargetFile targetFile;
     private Key key;
-    private PBox pBox;
 
     /**
      * Constructor method to generate new Encrypter object.
@@ -23,7 +26,14 @@ public class Encrypter {
     }
 
     public void encryptFile(){
+        try {
+            List<BitSet> file = PBox.split(targetFile.getBitsContents());
+            for(BitSet b:file){
 
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
