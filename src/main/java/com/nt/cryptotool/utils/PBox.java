@@ -21,4 +21,15 @@ public class PBox {
         }
         return returnArray;
     }
+
+    public static BitSet combine(List<BitSet> shredded) {
+        BitSet combined = new BitSet(shredded.size()*4);
+        for (int i = 0; i < shredded.size() ; i++) {
+            for (int j = 0; j < 4; j++) {
+                combined.set(i*4+j,shredded.get(i).get(j));
+            }
+        }
+        return combined;
+    }
+
 }
