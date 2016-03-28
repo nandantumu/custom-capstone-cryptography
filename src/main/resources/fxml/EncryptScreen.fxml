@@ -9,12 +9,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@../styles/uiSkin.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@../styles/uiSkin.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nt.cryptotool.GUIFiles.EncryptScreenController">
    <bottom>
-      <Button mnemonicParsing="false" styleClass="lowerBarButton" stylesheets="@../styles/uiSkin.css" text="Encrypt" textFill="WHITE" BorderPane.alignment="CENTER" />
+      <Button fx:id="encryptButton" mnemonicParsing="false" styleClass="lowerBarButton" stylesheets="@../styles/uiSkin.css" text="Encrypt" textFill="WHITE" BorderPane.alignment="CENTER" />
    </bottom>
    <top>
-      <Label text="Encrypt" textFill="WHITE" BorderPane.alignment="TOP_LEFT">
+      <Label fx:id="encryptTitleText" text="Encrypt" textFill="WHITE" BorderPane.alignment="TOP_LEFT">
          <font>
             <Font name="Helvetica Neue Light" size="36.0" />
          </font>
@@ -35,7 +35,7 @@
                      <padding>
                         <Insets right="5.0" />
                      </padding></Label>
-                  <Button mnemonicParsing="false" styleClass="mainButton" text="Button" textFill="WHITE" />
+                  <Button fx:id="selectKeyFileButton" mnemonicParsing="false" styleClass="mainButton" text="Button" textFill="WHITE" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
@@ -45,7 +45,7 @@
                         <Insets right="5.0" />
                      </padding>
                   </Label>
-                  <Button mnemonicParsing="false" styleClass="mainButton" text="Button" textFill="WHITE" />
+                  <Button fx:id="selectTargetFileButton" mnemonicParsing="false" styleClass="mainButton" text="Button" textFill="WHITE" />
                </children></HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
@@ -54,7 +54,7 @@
                         <Insets right="5.0" />
                      </padding>
                   </Label>
-                  <TextField promptText="Enter your password " styleClass="textBoxes" />
+                  <TextField fx:id="passwordTextField" promptText="Enter your password " styleClass="textBoxes" />
                </children></HBox>
          </children>
       </VBox>
