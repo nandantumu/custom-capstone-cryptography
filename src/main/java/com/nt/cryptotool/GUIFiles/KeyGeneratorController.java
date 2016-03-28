@@ -99,7 +99,7 @@ public class KeyGeneratorController {
                     keyGenerator.generateKey(theChosenFile,password);
                     BottomMessage.setText("Your Keyfile will be saved as Keyfile.secure");
                     BottomMessage.setTextFill(Color.WHITE);
-                } catch (PasswordNotFoundException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                     BottomMessage.setText("No Password Found");
                     BottomMessage.setTextFill(Color.RED);
