@@ -19,9 +19,9 @@ public class SBox {
      * Creates a new SBox object, using the 64Bit key provided
      * @param sBoxKey portion of Key from {@link Key#getSBoxKeys()}
      */
-    public SBox(BitSet sBoxKey) throws BitSetLengthException{
+    public SBox(BitSet sBoxKey) {
         //Reject keys of incorrect length
-        if(sBoxKey.length()!=64)throw new BitSetLengthException("SBox key was: "+sBoxKey.length()+" not 64");
+        //if(sBoxKey.length()!=64)throw new BitSetLengthException("SBox key was: "+sBoxKey.length()+" not 64");
         for (int i = 0; i < 16 ; i++) {
             keys.add(sBoxKey.get(i*4,((4*i)+3)));
         }
@@ -58,9 +58,11 @@ public class SBox {
         return returnSet;
     }
 
-    public BitSet encrypt(BitSet unencrypted){
-        BitSet forUseInMethod = (BitSet)unencrypted.clone();
-        forUseInMethod.xor(getKey(unencrypted));
-        return forUseInMethod;
+    /**
+     * This method mutates the given BitSet by XORing it with its key. No new object is created.
+     * @param unencrypted
+     */
+    public void encrypt(BitSet unencrypted){
+        unencrypted.xor(getKey(unencrypted));
     }
 }
