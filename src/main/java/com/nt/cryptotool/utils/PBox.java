@@ -4,12 +4,13 @@ import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.List;
 
-/** This class splits files into pieces that fit into SBoxes. In future versions, this would also scramble the order of the pieces.
+/**
+ * This class splits files into pieces that fit into SBoxes. In future versions, this would also scramble the order of the pieces.
  * Created by Nandan on 3/27/2016.
  */
 public class PBox {
     /**
-     *  This method returns a List of BitSets.
+     * This method returns a List of BitSets.
      * @param bitsContents BitSet to split into smaller pieces.
      * @return List of all the contents of bitsContents, split up into smaller BitSets of length 4.
      */
