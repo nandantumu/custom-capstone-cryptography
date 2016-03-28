@@ -21,7 +21,7 @@ public class Converter {
      * @param bitSetLength length of BitSet to be provided
      * @return BitSet of randomized nature.
      */
-    public BitSet bitsFromRandom(SecureRandom secureRandom, int bitSetLength){
+    public static BitSet bitsFromRandom(SecureRandom secureRandom, int bitSetLength){
         BitSet randomBits = new BitSet(bitSetLength);
         for(int index = 0;index<bitSetLength;index++){
             randomBits.set(index, secureRandom.nextBoolean());
@@ -35,7 +35,7 @@ public class Converter {
      * @return BitSet based on Byte[]
      */
 
-    public BitSet byteToBits(byte[] bytearray){
+    public static BitSet byteToBits(byte[] bytearray){
         BitSet returnValue = new BitSet((bytearray.length*8));
         ByteBuffer  byteBuffer = ByteBuffer.wrap(bytearray);
         //System.out.println(byteBuffer.asIntBuffer().get(1));

@@ -13,6 +13,7 @@ import org.apache.commons.io.IOUtils;
  * Created by Nandan on 3/21/2016.
  */
 public class TargetFile {
+
     private File sourceFile;
     private File targetFile;
     private FileInputStream fileInputStream;
@@ -56,6 +57,8 @@ public class TargetFile {
     public File getTargetFile(){
         return targetFile;
     }
-
+    public File getSourceFile() {
+        return sourceFile;
+    }
 
 }
