@@ -53,5 +53,9 @@ public class TargetFile {
         return fileOutputStream;
     }
 
+    public File getTargetFile(){
+        return targetFile;
+    }
+
 
 }
