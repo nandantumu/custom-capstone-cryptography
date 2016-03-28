@@ -11,6 +11,8 @@ import org.junit.Test;
 
 import java.util.BitSet;
 
+import static org.junit.Assert.*;
+
 /**
  * Created by Nandan on 3/21/2016.
  */
@@ -27,7 +29,7 @@ public class TargetFileTest {
 
     @After
     public void tearDown() throws Exception {
-
+        targetFile.getTargetFile().delete();
     }
 
     @Test
@@ -55,6 +57,15 @@ public class TargetFileTest {
 
     @Test
     public void testFileOutput() throws Exception {
-        FileUtils.writeByteArrayToFile(targetFile.getTargetFile(), targetFile.getBitsContents().toByteArray());
+        FileUtils.writeByteArrayToFile(targetFile.getTargetFile(), PBox.combine(PBox.split(targetFile.getBitsContents())).toByteArray());
+    }
+
+    @Test
+    public void testOutputLength() throws Exception {
+        System.out.print(targetFile.getBitsContents().get(8636));
+        System.out.print(targetFile.getBitsContents().get(8637));
+        System.out.print(targetFile.getBitsContents().get(8638));
+        System.out.print(targetFile.getBitsContents().get(8639));
+        assertEquals(targetFile.getBitsContents().size(),targetFile.getBytesContents().length*8);
     }
 }

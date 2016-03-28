@@ -17,6 +17,7 @@ public class Decrypter {
     private Key key;
     private SBox sBox;
     private SecureRandom secureRandom;
+    private byte[] resultant;
 
     /**
      * Constructor method to generate new Decrypter object.
@@ -37,7 +38,7 @@ public class Decrypter {
         secureRandom = new SecureRandom();
         secureRandom.setSeed(key.getLastWhiteningKey().toByteArray());
         BitSet fileBits = targetFile.getBitsContents();
-        fileBits.xor(Converter.bitsFromRandom(secureRandom,targetFile.getBytesContents().length*8));
+        fileBits.xor(Converter.bitsFromRandom(secureRandom,targetFile.getBitsContents().size()));
         //SBoxing
         List<BitSet> fileBitsSplit = PBox.split(targetFile.getBitsContents());
         for(BitSet b:fileBitsSplit){
@@ -46,10 +47,14 @@ public class Decrypter {
         BitSet finalBits = PBox.combine(fileBitsSplit);
         //Whitening
         secureRandom.setSeed(key.getFirstWhiteningKey().toByteArray());
-        finalBits.xor(Converter.bitsFromRandom(secureRandom,targetFile.getBytesContents().length*8));
+        finalBits.xor(Converter.bitsFromRandom(secureRandom,targetFile.getBitsContents().size()));
+        resultant = finalBits.toByteArray();
         //Saving
         FileUtils.writeByteArrayToFile(targetFile.getTargetFile(), finalBits.toByteArray());
 
     }
 
+    public byte[] getResultant() {
+        return resultant;
+    }
 }
