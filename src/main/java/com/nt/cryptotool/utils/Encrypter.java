@@ -43,6 +43,7 @@ public class Encrypter {
             sBox.encrypt(b);
         }
         BitSet finalBits = PBox.combine(fileBitsSplit);
+        //Whitening
         secureRandom.setSeed(key.getLastWhiteningKey().toByteArray());
         finalBits.xor(Converter.bitsFromRandom(secureRandom,targetFile.getBytesContents().length*8));
         FileUtils.writeByteArrayToFile(targetFile.getTargetFile(), finalBits.toByteArray());
