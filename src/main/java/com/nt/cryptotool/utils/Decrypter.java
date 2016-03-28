@@ -19,8 +19,8 @@ public class Decrypter {
     private SecureRandom secureRandom;
 
     /**
-     * Constructor method to generate new Encrypter object.
-     * @param targetFile file that must be encrypted
+     * Constructor method to generate new Decrypter object.
+     * @param targetFile file that must be decrypted
      * @param key key object to be used to encrypt the file
      */
     public Decrypter(TargetFile targetFile, Key key){
@@ -30,9 +30,9 @@ public class Decrypter {
     }
 
     /**
-     * Calling this method will encrypt the file, and save its contents to the specified {@link TargetFile}
+     * Calling this method will decrypt the file, and save its contents to the specified {@link TargetFile}
      */
-    public void encryptFile() throws IOException{
+    public void decryptFile() throws IOException{
         //Whitening
         secureRandom = new SecureRandom();
         secureRandom.setSeed(key.getLastWhiteningKey().toByteArray());
