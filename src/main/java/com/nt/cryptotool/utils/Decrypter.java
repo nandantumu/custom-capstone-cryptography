@@ -47,6 +47,7 @@ public class Decrypter {
         //Whitening
         secureRandom.setSeed(key.getFirstWhiteningKey().toByteArray());
         finalBits.xor(Converter.bitsFromRandom(secureRandom,targetFile.getBytesContents().length*8));
+        //Saving
         FileUtils.writeByteArrayToFile(targetFile.getTargetFile(), finalBits.toByteArray());
 
     }

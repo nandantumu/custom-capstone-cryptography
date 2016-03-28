@@ -3,6 +3,7 @@ package test.com.nt.cryptotool.objects;
 import com.nt.cryptotool.miscobjects.Task;
 import com.nt.cryptotool.objects.TargetFile;
 import com.nt.cryptotool.utils.Converter;
+import com.nt.cryptotool.utils.PBox;
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
@@ -52,8 +53,8 @@ public class TargetFileTest {
         }
     }
 
-    /*@Test
+    @Test
     public void testFileOutput() throws Exception {
-        FileUtils.writeByteArrayToFile(targetFile.getTargetFile(),targetFile.getBytesContents());
-    }*/
+        FileUtils.writeByteArrayToFile(targetFile.getTargetFile(), targetFile.getBitsContents().toByteArray());
+    }
 }

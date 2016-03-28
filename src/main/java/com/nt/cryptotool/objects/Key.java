@@ -48,9 +48,9 @@ public class Key implements Serializable{
             //apply XOR to all bits
             allBits.xor(keySecurity);
             //Retrieve key portions
-            sBox = allBits.get(0,63);
-            firstWhite = allBits.get(64,319);
-            lastWhite = allBits.get(320,576);
+            sBox = allBits.get(0,64);
+            firstWhite = allBits.get(64,320);
+            lastWhite = allBits.get(320,577);
         } catch (IOException e) {
             e.printStackTrace();
         }

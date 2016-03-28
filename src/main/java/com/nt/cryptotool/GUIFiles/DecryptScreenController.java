@@ -11,6 +11,7 @@ import java.util.ResourceBundle;
 import com.nt.cryptotool.miscobjects.Task;
 import com.nt.cryptotool.objects.Key;
 import com.nt.cryptotool.objects.TargetFile;
+import com.nt.cryptotool.utils.Decrypter;
 import com.nt.cryptotool.utils.Encrypter;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -82,8 +83,8 @@ public class DecryptScreenController {
                 try {
                     TargetFile targetFile1 = new TargetFile(targetFile.getAbsolutePath(), Task.Decrypt);
                     Key theKey = new Key(keyfile,passwordField.getText().trim());
-                    Encrypter encrypter = new Encrypter(targetFile1,theKey);
-                    encrypter.encryptFile();
+                    Decrypter decrypter = new Decrypter(targetFile1,theKey);
+                    decrypter.decryptFile();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

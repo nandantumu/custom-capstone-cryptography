@@ -36,7 +36,7 @@ public class TargetFile {
         targetFile.mkdirs();
         try {
             sourceContentsBytes = IOUtils.toByteArray(fileInputStream);
-            sourceContentsBits = converter.byteToBits(IOUtils.toByteArray(fileInputStream));
+            sourceContentsBits = converter.byteToBits(sourceContentsBytes);
             fileInputStream.close();
             fileOutputStream.close();
         } catch (IOException e) {
