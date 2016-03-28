@@ -15,8 +15,8 @@ public class PBox {
      * @return List of all the contents of bitsContents, split up into smaller BitSets of length 4.
      */
     public static List<BitSet> split(BitSet bitsContents) {
-        List<BitSet> returnArray = new ArrayList<BitSet>(bitsContents.length()/4);
-        for (int i = 0; i < bitsContents.length()/4 ; i++) {
+        List<BitSet> returnArray = new ArrayList<BitSet>(bitsContents.toByteArray().length*2);
+        for (int i = 0; i < bitsContents.toByteArray().length*2 ; i++) {
             returnArray.add(bitsContents.get(i*4,((4*i)+3)));
         }
         return returnArray;

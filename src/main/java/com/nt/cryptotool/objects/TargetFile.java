@@ -18,6 +18,8 @@ public class TargetFile {
     private File targetFile;
     private FileInputStream fileInputStream;
     private FileOutputStream fileOutputStream;
+    private byte[] sourceContentsBytes;
+    private BitSet sourceContentsBits;
     private Converter converter = new Converter();
 
     public TargetFile(String url, Task task) throws FileNotFoundException{
@@ -32,14 +34,22 @@ public class TargetFile {
         fileInputStream = new FileInputStream(sourceFile);
         fileOutputStream = new FileOutputStream(targetFile);
         targetFile.mkdirs();
+        try {
+            sourceContentsBytes = IOUtils.toByteArray(fileInputStream);
+            sourceContentsBits = converter.byteToBits(IOUtils.toByteArray(fileInputStream));
+            fileInputStream.close();
+            fileOutputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public byte[] getBytesContents() throws IOException {
-        return IOUtils.toByteArray(fileInputStream);
+        return sourceContentsBytes;
     }
 
     public BitSet getBitsContents() throws IOException{
-        return converter.byteToBits(IOUtils.toByteArray(fileInputStream));
+        return sourceContentsBits;
     }
 
     public int getFileSize(){

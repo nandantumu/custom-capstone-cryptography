@@ -3,6 +3,7 @@ package test.com.nt.cryptotool.objects;
 import com.nt.cryptotool.miscobjects.Task;
 import com.nt.cryptotool.objects.TargetFile;
 import com.nt.cryptotool.utils.Converter;
+import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -50,4 +51,9 @@ public class TargetFileTest {
             System.out.println((int)thebyte);
         }
     }
+
+    /*@Test
+    public void testFileOutput() throws Exception {
+        FileUtils.writeByteArrayToFile(targetFile.getTargetFile(),targetFile.getBytesContents());
+    }*/
 }

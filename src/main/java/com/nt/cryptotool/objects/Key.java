@@ -42,6 +42,7 @@ public class Key implements Serializable{
             BitSet allBits = converter.byteToBits(allBytes);
             //Get the encryptionXor based on provided password.
             //The fact that an incorrect password will not throw errors is a security feature.
+            sRandom = new SecureRandom();
             sRandom.setSeed(password.getBytes());
             keySecurity = converter.bitsFromRandom(sRandom,576);
             //apply XOR to all bits

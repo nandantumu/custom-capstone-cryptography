@@ -39,7 +39,7 @@ public class ConverterTest {
         assertEquals(ByteBuffer.wrap(expectedOutput.toByteArray()), ByteBuffer.wrap(input));
     }
 
-    @Test
+    /*@Test
     public void testBytestoBitslength() throws Exception {
         byte[] input = new byte[]{(byte) 0xFFFF,(byte)0x7F70,(byte)0xF45A,(byte)0xA24B};
         BitSet output = converter.byteToBits(input);
@@ -48,7 +48,7 @@ public class ConverterTest {
         System.out.println(input);
         System.out.println(output.toByteArray());
         assertTrue(output.length()==input.length*8);
-    }
+    }*/
 
     @Test
     public void curiosity() throws Exception {
