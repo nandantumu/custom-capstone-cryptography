@@ -23,7 +23,7 @@ public class SBox {
         //Reject keys of incorrect length
         //if(sBoxKey.length()!=64)throw new BitSetLengthException("SBox key was: "+sBoxKey.length()+" not 64");
         for (int i = 0; i < 16 ; i++) {
-            keys.add(sBoxKey.get(i*4,((4*i)+3)));
+            keys.add(sBoxKey.get(i*4,((4*i))));
         }
     }
 
