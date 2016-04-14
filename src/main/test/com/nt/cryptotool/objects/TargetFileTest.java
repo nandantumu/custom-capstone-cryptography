@@ -23,7 +23,7 @@ public class TargetFileTest {
 
     @Before
     public void setUp() throws Exception {
-        targetFile = new TargetFile("C://Users/Nandan/Documents/MuseLog.txt", Task.Encrypt);
+        targetFile = new TargetFile("C://Users/Nandan/Desktop/RoboRealm_Crash.log", Task.Encrypt);
         converter = new Converter();
     }
 
@@ -57,7 +57,7 @@ public class TargetFileTest {
 
     @Test
     public void testFileOutput() throws Exception {
-        FileUtils.writeByteArrayToFile(targetFile.getTargetFile(), PBox.combine(PBox.split(targetFile.getBitsContents())).toByteArray());
+        FileUtils.writeByteArrayToFile(targetFile.getTargetFile(), targetFile.getBitsContents().toByteArray());
     }
 
     @Test
