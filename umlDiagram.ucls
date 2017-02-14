@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.9" icons="true" automaticImage="PNG" always-add-relationships="true" generalizations="true" 
+  realizations="true" associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="com.nt.cryptotool.MainApp" project="EncryptionTool" 
+    file="/EncryptionTool/src/main/java/com/nt/cryptotool/MainApp.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="178" width="164" x="390" y="15"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="com.nt.cryptotool.GUIFiles.HomeScreenController" project="EncryptionTool" 
+    file="/EncryptionTool/src/main/java/com/nt/cryptotool/GUIFiles/HomeScreenController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="93" y="313"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="com.nt.cryptotool.GUIFiles.EncryptScreenController" project="EncryptionTool" 
+    file="/EncryptionTool/src/main/java/com/nt/cryptotool/GUIFiles/EncryptScreenController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="413" y="361"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="com.nt.cryptotool.GUIFiles.DecryptScreenController" project="EncryptionTool" 
+    file="/EncryptionTool/src/main/java/com/nt/cryptotool/GUIFiles/DecryptScreenController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="697" y="363"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="com.nt.cryptotool.GUIFiles.KeyGeneratorController" project="EncryptionTool" 
+    file="/EncryptionTool/src/main/java/com/nt/cryptotool/GUIFiles/KeyGeneratorController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="322" width="232" x="901" y="141"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="com.nt.cryptotool.objects.Key" project="EncryptionTool" 
+    file="/EncryptionTool/src/main/java/com/nt/cryptotool/objects/Key.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="102" y="678"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="com.nt.cryptotool.objects.TargetFile" project="EncryptionTool" 
+    file="/EncryptionTool/src/main/java/com/nt/cryptotool/objects/TargetFile.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="982" y="767"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="com.nt.cryptotool.utils.FileOperations" project="EncryptionTool" 
+    file="/EncryptionTool/src/main/java/com/nt/cryptotool/utils/FileOperations.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="114" y="1026"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="com.nt.cryptotool.utils.SBox" project="EncryptionTool" 
+    file="/EncryptionTool/src/main/java/com/nt/cryptotool/utils/SBox.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="377" y="1224"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="com.nt.cryptotool.utils.Decrypter" project="EncryptionTool" 
+    file="/EncryptionTool/src/main/java/com/nt/cryptotool/utils/Decrypter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="390" y="974"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="com.nt.cryptotool.utils.PBox" project="EncryptionTool" 
+    file="/EncryptionTool/src/main/java/com/nt/cryptotool/utils/PBox.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="745" y="1264"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="com.nt.cryptotool.utils.Encrypter" project="EncryptionTool" 
+    file="/EncryptionTool/src/main/java/com/nt/cryptotool/utils/Encrypter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="721" y="1042"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="com.nt.cryptotool.utils.Converter" project="EncryptionTool" 
+    file="/EncryptionTool/src/main/java/com/nt/cryptotool/utils/Converter.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1347" y="916"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="com.nt.cryptotool.utils.KeyGenerator" project="EncryptionTool" 
+    file="/EncryptionTool/src/main/java/com/nt/cryptotool/utils/KeyGenerator.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1271" y="532"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <dependency id="15">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="16">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <association id="17">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="18" name="targetFile"/>      
+      <multiplicity id="19" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="20">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="21" name="converter"/>      
+      <multiplicity id="22" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="23">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="24" name="key"/>      
+      <multiplicity id="25" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="26">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="27">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="28">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <association id="29">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="30" name="sBox"/>      
+      <multiplicity id="31" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="32">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="14"/>  
+  </dependency>  
+  <dependency id="33">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <association id="34">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="35" name="converter"/>      
+      <multiplicity id="36" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="37">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="38">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <association id="39">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="40" name="key"/>      
+      <multiplicity id="41" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="42">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="43" name="sBox"/>      
+      <multiplicity id="44" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="45">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <association id="46">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="47" name="main"/>      
+      <multiplicity id="48" minimum="0" maximum="1">        
+        <position height="18" width="27" x="333" y="155"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="49">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="50" name="targetFile"/>      
+      <multiplicity id="51" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="52">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <dependency id="53">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
