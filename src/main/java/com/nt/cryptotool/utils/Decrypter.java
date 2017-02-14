@@ -38,7 +38,7 @@ public class Decrypter {
         secureRandom = new SecureRandom();
         secureRandom.setSeed(key.getLastWhiteningKey().toByteArray());
         BitSet fileBits = targetFile.getBitsContents();
-        fileBits.xor(Converter.bitsFromRandom(secureRandom,fileBits.size()));
+        fileBits.xor(Converter.bitsFromRandom(secureRandom,targetFile.getFileSize()*8));
         //SBoxing
         //List<BitSet> fileBitsSplit = PBox.split(targetFile.getBitsContents());
         /*
@@ -48,7 +48,7 @@ public class Decrypter {
         //BitSet finalBits = PBox.combine(fileBitsSplit);
         //Whitening
         secureRandom.setSeed(key.getFirstWhiteningKey().toByteArray());
-        fileBits.xor(Converter.bitsFromRandom(secureRandom,fileBits.size()));
+        fileBits.xor(Converter.bitsFromRandom(secureRandom,targetFile.getFileSize()*8));
         resultant = fileBits.toByteArray();
         //Saving
         FileUtils.writeByteArrayToFile(targetFile.getTargetFile(), fileBits.toByteArray());

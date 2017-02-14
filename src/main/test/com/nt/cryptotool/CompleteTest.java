@@ -6,12 +6,15 @@ import com.nt.cryptotool.objects.TargetFile;
 import com.nt.cryptotool.utils.Converter;
 import com.nt.cryptotool.utils.Decrypter;
 import com.nt.cryptotool.utils.Encrypter;
+import com.nt.cryptotool.utils.SBox;
+import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.nio.ByteBuffer;
 import java.security.SecureRandom;
+import java.util.BitSet;
 
 import static org.junit.Assert.*;
 
@@ -63,5 +66,21 @@ public class CompleteTest {
             System.out.print(b);
         }*/
         assertEquals(decrypter.getResultant().length,encrypter.getResultant().length);
+    }
+
+    @Test
+    public void testFileXor() throws Exception {
+        BitSet fileBits = new BitSet(8);
+        fileBits = SBox.getBitSet("00001111");
+        fileBits.xor(SBox.getBitSet("11110000"));
+        //Whitening
+        fileBits.xor(SBox.getBitSet("00001111"));
+        for (int i = 0; i < fileBits.size(); i++) {
+            if(fileBits.get(i)) System.out.print("1");
+            else if(!fileBits.get(i)) System.out.print("0");
+            System.out.print("|");
+        }
+        System.out.println(fileBits.size());
+
     }
 }
